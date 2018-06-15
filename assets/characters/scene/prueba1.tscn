@@ -8,15 +8,9 @@
 [node name="character1" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 354.816, 284.835 )
-vel_scalar = 300
-jump = 500
-g_force = 20
 
 [node name="character2" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 698.583, 282.38 )
-vel_scalar = 300
-jump = 500
-g_force = 20
 
 

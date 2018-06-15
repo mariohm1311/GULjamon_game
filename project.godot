@@ -11,8 +11,14 @@ config_version=3
 [application]
 
 config/name="GULjamon_game"
-run/main_scene="res://assets/characters/scene/prueba1.tscn"
+run/main_scene="res://scenes/main_test.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=true
 
 [input]
 
