@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/congratulations.wav-f554246ab55cd2dc3d2bd01794c3445d.sample"
+
+[deps]
+
+source_file="res://assets/voices/imports/congratulations.wav"
+source_md5="01223e0b5a66717a00a987b80a90b604"
+
+dest_files=[ "res://.import/congratulations.wav-f554246ab55cd2dc3d2bd01794c3445d.sample" ]
+dest_md5="b18f362212f2a8b635c1f374ae47235e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
