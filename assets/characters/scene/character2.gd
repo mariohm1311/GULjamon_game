@@ -9,6 +9,7 @@ var vel = Vector2()
 var time = 4.5
 var flipped = false
 var moving = false
+var entermenu= false
 
 func _physics_process(delta):
 	time += delta
@@ -90,3 +91,12 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+func _on_Area2D_body_entered(body):
+	var entermenu= true
+	var other= self.get_parent().get_node("character2").entermenu
+	if(other==true):
+		get_tree().change_scene("res://scenes/game_screen.tscn")
+	
+	
