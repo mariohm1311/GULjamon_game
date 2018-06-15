@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://assets/characters/scene/character1.gd" type="Script" id=1]
-[ext_resource path="res://assets/characters/imports/Tesla_1.png" type="Texture" id=2]
-[ext_resource path="res://assets/characters/imports/Tesla_2.png" type="Texture" id=3]
-[ext_resource path="res://assets/characters/imports/Tesla_3.png" type="Texture" id=4]
-[ext_resource path="res://assets/characters/imports/Tesla_down.png" type="Texture" id=5]
-[ext_resource path="res://assets/characters/imports/Tesla_up.png" type="Texture" id=6]
+[ext_resource path="res://assets/characters/scene/character2.gd" type="Script" id=1]
+[ext_resource path="res://assets/characters/imports/Edison_3.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/imports/Edison_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/imports/Edison_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/characters/imports/Edison_down.png" type="Texture" id=5]
+[ext_resource path="res://assets/characters/imports/Edison_up.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -20,7 +20,6 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
-_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="Animation" id=3]
 
@@ -81,7 +80,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=6]
 
-resource_name = "static"
 length = 1.0
 loop = true
 step = 0.1
@@ -98,7 +96,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[node name="Tesla" type="KinematicBody2D" index="0"]
+[node name="Edison" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
