@@ -14,7 +14,7 @@ func _physics_process(delta):
 		vel.x = -vel_scalar
 	if(Input.is_action_pressed("go_right2")):
 		vel.x = vel_scalar
-	if(Input.is_action_just_pressed("jump2")):
+	if(Input.is_action_just_pressed("jump2") and is_on_floor()):
 		vel.y = -jump
 	if(Input.is_action_pressed("crouch1")):
 		pass
