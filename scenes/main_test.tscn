@@ -1,25 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/characters/scene/Edison.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/characters/scene/Tesla.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/test_map.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/player_cam.gd" type="Script" id=4]
+[ext_resource path="res://scenes/player_cam.gd" type="Script" id=1]
+[ext_resource path="res://assets/scenery/scene/tilemap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/characters/scene/Edison.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/characters/scene/Tesla.tscn" type="PackedScene" id=4]
 
 [node name="Node" type="Node"]
 
-[node name="Edison" parent="." index="0" instance=ExtResource( 1 )]
-
-position = Vector2( 900.24, 429.432 )
-
-[node name="Tesla" parent="." index="1" instance=ExtResource( 2 )]
-
-position = Vector2( 537.604, 446.17 )
-
-[node name="map" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( -44.6321, -11.158 )
-
-[node name="player_cam" type="Camera2D" parent="." index="3"]
+[node name="player_cam" type="Camera2D" parent="." index="0"]
 
 anchor_mode = 1
 rotating = false
@@ -43,6 +31,16 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-script = ExtResource( 4 )
+script = ExtResource( 1 )
+
+[node name="map2" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="Edison" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 198.953, 214.125 )
+
+[node name="Tesla" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 203.365, 560.95 )
 
 

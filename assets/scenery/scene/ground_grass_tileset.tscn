@@ -7,13 +7,7 @@
 [ext_resource path="res://assets/scenery/imports/grassHill.png" type="Texture" id=5]
 [ext_resource path="res://assets/scenery/imports/soilCliff.png" type="Texture" id=6]
 
-
-
-
-
-
-
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="grass mid" type="Sprite" parent="." index="0"]
 

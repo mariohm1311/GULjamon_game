@@ -26,8 +26,7 @@
 [ext_resource path="res://assets/scenery/imports/boxCrate_double.png" type="Texture" id=24]
 [ext_resource path="res://assets/scenery/imports/boxItem.png" type="Texture" id=25]
 
-
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="bush" type="Sprite" parent="." index="0"]
 
