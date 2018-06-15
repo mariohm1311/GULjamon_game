@@ -77,6 +77,8 @@ position = Vector2( 1436.88, 720.406 )
 position = Vector2( 5711.9, 723.727 )
 
 [node name="Edison" parent="." index="7" instance=ExtResource( 4 )]
+<<<<<<< HEAD
+=======
 
 position = Vector2( 198.953, 214.125 )
 time_ability1 = 5
@@ -85,7 +87,17 @@ time_ability2 = 20
 [node name="Tesla" parent="." index="8" instance=ExtResource( 5 )]
 
 position = Vector2( 203.365, 560.95 )
+>>>>>>> d93696c35facb4d0dd0eff4c9133e4deb15ecfb9
 
+<<<<<<< HEAD
+=======
+position = Vector2( 198.953, 214.125 )
+
+[node name="Tesla" parent="." index="8" instance=ExtResource( 5 )]
+
+position = Vector2( 203.365, 560.95 )
+
+>>>>>>> 0a874ba7601f554dfe6fcc979d45781ed235c913
 [connection signal="body_entered" from="Finish" to="Edison" method="_on_Finish_body_entered"]
 
 [connection signal="body_entered" from="Finish" to="Tesla" method="_on_Finish_body_entered"]

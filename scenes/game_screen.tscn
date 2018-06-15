@@ -2,10 +2,14 @@
 
 [ext_resource path="res://game_screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/main_test.tscn" type="PackedScene" id=2]
+<<<<<<< HEAD
 [ext_resource path="res://assets/items/imports/HUD2.png" type="Texture" id=3]
 [ext_resource path="res://assets/items/imports/Mini_misil.png" type="Texture" id=4]
 [ext_resource path="res://assets/items/imports/Bomb_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/332381__davidoburke__8-bit-loop.wav" type="AudioStream" id=6]
+=======
+[ext_resource path="res://assets/HUD2.png" type="Texture" id=3]
+>>>>>>> 0a874ba7601f554dfe6fcc979d45781ed235c913
 
 [node name="Node" type="Node"]
 
