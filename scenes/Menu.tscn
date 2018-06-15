@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Menu/evil-laboratory-background-4.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/Menu/Play.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/Menu/log.png" type="Texture" id=5]
 [ext_resource path="res://assets/scenery/imports/signLeft.png" type="Texture" id=6]
 [ext_resource path="res://assets/scenery/imports/signRight.png" type="Texture" id=7]
+[ext_resource path="res://assets/scenery/tilesets/tileset1.tres" type="TileSet" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -42,11 +43,11 @@ polygon = PoolVector2Array( 524.975, 416.063, 546.078, 367.828, 597.328, 342.204
 
 [node name="Edison" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 1288.88, 268.985 )
+position = Vector2( 1032.34, 899.523 )
 
 [node name="Tesla" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 638.728, 248.02 )
+position = Vector2( 895.27, 897.103 )
 
 [node name="Area2D" type="Area2D" parent="." index="4"]
 
@@ -83,6 +84,27 @@ texture = ExtResource( 6 )
 position = Vector2( 649.73, 277.049 )
 scale = Vector2( 0.231946, 0.231946 )
 texture = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="." index="7"]
+
+mode = 0
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 70, 70 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -1, 14, 0, -65536, 14, 0, -65535, 14, 0, -65534, 14, 0, -65533, 14, 0, -65532, 14, 0, -65531, 14, 0, -65530, 14, 0, -65529, 14, 0, -65528, 14, 0, -65527, 14, 0, -65526, 14, 0, -65525, 14, 0, -65524, 14, 0, -65523, 14, 0, -65522, 14, 0, -65521, 14, 0, -65520, 14, 0, -65519, 14, 0, -65518, 14, 0, -65517, 14, 0, -65516, 14, 0, -65515, 14, 0, -65514, 14, 0, -65513, 14, 0, -65512, 14, 0, -65511, 14, 0, -65510, 14, 0, -65509, 14, 0, 65535, 14, 0, 27, 14, 0, 131071, 14, 0, 65563, 14, 0, 196607, 14, 0, 131099, 14, 0, 262143, 14, 0, 196635, 14, 0, 327679, 14, 0, 262171, 14, 0, 393215, 14, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 5, 0, 327702, 4, 0, 327703, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 14, 0, 458751, 14, 0, 393243, 14, 0, 524287, 14, 0, 458779, 14, 0, 589823, 14, 0, 524315, 14, 0, 655359, 14, 0, 589827, 4, 0, 589828, 3, 0, 589829, 3, 0, 589830, 5, 0, 589844, 4, 0, 589845, 3, 0, 589846, 3, 0, 589847, 5, 0, 589851, 14, 0, 720895, 14, 0, 655387, 14, 0, 786431, 14, 0, 720923, 14, 0, 851967, 14, 0, 786432, 3, 0, 786433, 3, 0, 786434, 3, 0, 786435, 3, 0, 786436, 5, 0, 786454, 4, 0, 786455, 3, 0, 786456, 3, 0, 786457, 3, 0, 786458, 3, 0, 786459, 14, 0, 917503, 14, 0, 851995, 14, 0, 983039, 14, 0, 917504, 3, 0, 917505, 3, 0, 917506, 3, 0, 917507, 3, 0, 917508, 3, 0, 917509, 3, 0, 917510, 3, 0, 917511, 3, 0, 917512, 3, 0, 917513, 3, 0, 917514, 3, 0, 917515, 3, 0, 917516, 3, 0, 917517, 3, 0, 917518, 3, 0, 917519, 3, 0, 917520, 3, 0, 917521, 3, 0, 917522, 3, 0, 917523, 3, 0, 917524, 3, 0, 917525, 3, 0, 917526, 3, 0, 917527, 3, 0, 917528, 3, 0, 917529, 3, 0, 917530, 3, 0, 917531, 14, 0, 1048575, 14, 0, 983040, 14, 0, 983041, 14, 0, 983042, 14, 0, 983043, 14, 0, 983044, 14, 0, 983045, 14, 0, 983046, 14, 0, 983047, 14, 0, 983048, 14, 0, 983049, 14, 0, 983050, 14, 0, 983051, 14, 0, 983052, 14, 0, 983053, 14, 0, 983054, 14, 0, 983055, 14, 0, 983056, 14, 0, 983057, 14, 0, 983058, 14, 0, 983059, 14, 0, 983060, 14, 0, 983061, 14, 0, 983062, 14, 0, 983063, 14, 0, 983064, 14, 0, 983065, 14, 0, 983066, 14, 0, 983067, 14, 0 )
+_sections_unfolded = [ "Cell" ]
 
 [connection signal="body_entered" from="Area2D" to="Tesla" method="_on_Area2D_body_entered"]
 
