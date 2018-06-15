@@ -11,9 +11,11 @@
 [node name="Character1" parent="Node2D" index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 302.956, 434.137 )
+jump = 1000
 
 [node name="character2" parent="Node2D" index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 712.528, 497.627 )
+jump = 1000
 
 

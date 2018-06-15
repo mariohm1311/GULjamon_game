@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export var vel_scalar = 300
-export var jump = 500
+export var jump = 1000
 export var g_force = 20
 var vel = Vector2()
 
@@ -19,7 +19,7 @@ func _physics_process(delta):
 		pass
 
 
-	move_and_collide(vel*delta)
+	move_and_slide(vel, Vector2(0,-1))
 
 
 
