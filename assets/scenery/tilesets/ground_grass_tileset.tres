@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=13 format=2]
 
-[ext_resource path="res://Scenery/grassMid.png" type="Texture" id=1]
-[ext_resource path="res://Scenery/grassCorner.png" type="Texture" id=2]
-[ext_resource path="res://Scenery/soil.png" type="Texture" id=3]
-[ext_resource path="res://Scenery/grassCliff.png" type="Texture" id=4]
-[ext_resource path="res://Scenery/grassHill.png" type="Texture" id=5]
-[ext_resource path="res://Scenery/soilCliff.png" type="Texture" id=6]
+[ext_resource path="res://assets/scenery/imports/grassMid.png" type="Texture" id=1]
+[ext_resource path="res://assets/scenery/imports/grassCorner.png" type="Texture" id=2]
+[ext_resource path="res://assets/scenery/imports/soil.png" type="Texture" id=3]
+[ext_resource path="res://assets/scenery/imports/grassCliff.png" type="Texture" id=4]
+[ext_resource path="res://assets/scenery/imports/grassHill.png" type="Texture" id=5]
+[ext_resource path="res://assets/scenery/imports/soilCliff.png" type="Texture" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
