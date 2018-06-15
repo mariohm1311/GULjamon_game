@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://game_screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/main_test.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/HUD.png" type="Texture" id=3]
 
 [node name="Node" type="Node" index="0"]
 
@@ -99,5 +100,11 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
 [node name="Node" parent="container_p2/vp" index="0" instance=ExtResource( 2 )]
+
+[node name="HUD" type="Sprite" parent="." index="2"]
+
+position = Vector2( 960.666, 525.624 )
+scale = Vector2( 0.240021, 0.240021 )
+texture = ExtResource( 3 )
 
 
