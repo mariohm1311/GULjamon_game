@@ -80,6 +80,7 @@ func _physics_process(delta):
 
 func create_impulse(vector):
 	moving=true
+	self.position += Vector2(0,-10)
 	vel += vector
 
 func _ready():
@@ -100,3 +101,6 @@ func _on_Area2D_body_entered(body):
 
 func _on_Finish_body_entered(body):
 	get_tree().change_scene("res://scenes/Menu.tscn")
+
+func coke_taken():
+	vel_scalar = 350

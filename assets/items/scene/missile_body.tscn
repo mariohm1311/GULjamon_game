@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/items/scene/missile_body.gd" type="Script" id=1]
+[ext_resource path="res://assets/items/scene/missile.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.8162, 94.4958 )
+
+[node name="missile_body" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+vel_scalar = 300
+jump = 1000
+g_force = 20
+time_ability = 5
+distance_move = 4000
+
+[node name="missile" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0, 24.2069 )
+shape = SubResource( 1 )
+
+

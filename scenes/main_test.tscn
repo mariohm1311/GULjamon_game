@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 115.354, 89.2737 )
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="map2" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -77,6 +77,15 @@ position = Vector2( 1436.88, 720.406 )
 position = Vector2( 5711.9, 723.727 )
 
 [node name="Edison" parent="." index="7" instance=ExtResource( 4 )]
+<<<<<<< HEAD
+=======
+
+position = Vector2( 198.953, 214.125 )
+
+[node name="Tesla" parent="." index="8" instance=ExtResource( 5 )]
+
+position = Vector2( 203.365, 560.95 )
+>>>>>>> d93696c35facb4d0dd0eff4c9133e4deb15ecfb9
 
 position = Vector2( 198.953, 214.125 )
 

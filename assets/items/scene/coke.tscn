@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/items/imports/Coke.png" type="Texture" id=1]
 [ext_resource path="res://assets/items/scene/coke.gd" type="Script" id=2]
+=======
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/items/imports/Pepsi.png" type="Texture" id=1]
+>>>>>>> d93696c35facb4d0dd0eff4c9133e4deb15ecfb9
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
+<<<<<<< HEAD
 extents = Vector2( 66.3281, 121.069 )
 
 [node name="Coke" type="Sprite"]
@@ -17,6 +24,15 @@ _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
+=======
+extents = Vector2( 65.9645, 118.533 )
+
+[node name="Sprite" type="Sprite" index="0"]
+
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+>>>>>>> d93696c35facb4d0dd0eff4c9133e4deb15ecfb9
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
@@ -30,9 +46,15 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
+<<<<<<< HEAD
 position = Vector2( -1.62109, -7.02467 )
 shape = SubResource( 1 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
+=======
+position = Vector2( 0, -8 )
+shape = SubResource( 1 )
+
+>>>>>>> d93696c35facb4d0dd0eff4c9133e4deb15ecfb9
 
