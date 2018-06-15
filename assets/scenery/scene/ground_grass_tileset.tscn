@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenery/grassMid.png" type="Texture" id=1]
+[ext_resource path="res://Scenery/grassCorner.png" type="Texture" id=2]
+[ext_resource path="res://Scenery/soil.png" type="Texture" id=3]
+[ext_resource path="res://Scenery/grassCliff.png" type="Texture" id=4]
+[ext_resource path="res://Scenery/grassHill.png" type="Texture" id=5]
+[ext_resource path="res://Scenery/soilCliff.png" type="Texture" id=6]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="grass mid" type="Sprite" parent="." index="0"]
+
+position = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grass mid" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grass mid/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -64, -64, 64, -64, 64, 64, -64, 64 )
+
+[node name="grass corner" type="Sprite" parent="." index="1"]
+
+position = Vector2( 496, 64 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grass corner" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grass corner/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -64, -64, 64, -64, 64, 64, -64, 64 )
+
+[node name="soil" type="Sprite" parent="." index="2"]
+
+position = Vector2( 352, 64 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="soil" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="soil/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -64, -64, 64, -64, 64, 64, -64, 64 )
+
+[node name="grass cliff" type="Sprite" parent="." index="3"]
+
+position = Vector2( 208, 64 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grass cliff" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grass cliff/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -56, -64, 64, -64, 64, 64, -64, -24 )
+
+[node name="grass hill" type="Sprite" parent="." index="4"]
+
+position = Vector2( 784, 64 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grass hill" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grass hill/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 64, 64, -64, 64, -64, -64 )
+
+[node name="soil cliff" type="Sprite" parent="." index="5"]
+
+position = Vector2( 640, 64 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="soil cliff" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="soil cliff/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 64, 64, -64, -64, 64, -64 )
+
+
