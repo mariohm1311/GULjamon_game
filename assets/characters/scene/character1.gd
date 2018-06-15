@@ -3,12 +3,15 @@ extends KinematicBody2D
 export var vel_scalar = 300
 export var jump = 1000
 export var g_force = 20
-var vel = Vector2()
+export var time_ability = 5
 
+var vel = Vector2()
+var time = 4.5
 var flipped = false
 var moving = false
 
 func _physics_process(delta):
+	time += delta
 	
 	vel.y += g_force
 		
@@ -62,12 +65,21 @@ func _physics_process(delta):
 	    		$AnimatedSprite/AnimationPlayer.play("moving_down")
 		
 	moving = false
+	
+	if (Input.is_action_just_pressed("ability1") and time > time_ability):
+		time = 0
+		var bomb = preload("res://assets/items/scene/bomb1.tscn").instance()
+		bomb.set_target('Edison')
+		bomb.position = position
+		get_parent().add_child(bomb)
 
-	move_and_slide(vel, Vector2(0,-1))
+	vel = move_and_slide(vel, Vector2(0,-1))
 
 
 
-
+func create_impulse(vector):
+	moving=true
+	vel += vector
 
 func _ready():
 	# Called every time the node is added to the scene.
