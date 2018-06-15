@@ -3,16 +3,19 @@ extends KinematicBody2D
 export var vel_scalar = 300
 export var jump = 1000
 export var g_force = 20
-export var time_ability = 5
+export var time_ability1 = 5
+export var time_ability2 = 20
 
 var vel = Vector2()
-var time = 4.5
+var time1 = 0
+var time2 = 0
 var flipped = false
 var moving = false
 
 
 func _physics_process(delta):
-	time += delta
+	time1 += delta
+	time2 += delta
 	
 	vel.y += g_force
 		
@@ -67,12 +70,22 @@ func _physics_process(delta):
 		
 	moving = false
 	
-	if (Input.is_action_just_pressed("ability2") and time > time_ability):
-		time = 0
+	if (Input.is_action_just_pressed("ability12") and time1 > time_ability1):
+		time1 = 0
 		var bomb = preload("res://assets/items/scene/bomb1.tscn").instance()
 		bomb.set_target('Tesla')
 		bomb.position = position
 		get_parent().add_child(bomb)
+	
+	if (Input.is_action_just_pressed("ability22") and time2 > time_ability2):
+		time2 = 0
+		
+		var tgt_position = self.get_parent().get_node('Tesla').position
+		var tgt_velocity = self.get_parent().get_node('Tesla').vel
+		
+		var missile = preload("res://assets/items/scene/missile_body.tscn").instance()
+		missile.set_target('Tesla', tgt_position, tgt_velocity)
+		get_parent().add_child(missile)
 
 	vel = move_and_slide(vel, Vector2(0,-1))
 
@@ -94,13 +107,14 @@ func _ready():
 #	pass
 
 
+
 func _on_Area2D_body_entered(body):
-		get_tree().change_scene("res://scenes/game_screen.tscn")
-	
-	
+	get_tree().change_scene("res://scenes/game_screen.tscn")
+
+
 
 func _on_Finish_body_entered(body):
-	get_tree().change_scene("res://scenes/Menu.tscn")
+	get_tree().change_scene("res://scenes/game_over.tscn")
 
 func coke_taken():
 	vel_scalar = 350

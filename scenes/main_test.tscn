@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 115.354, 89.2737 )
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="map2" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -79,13 +79,15 @@ position = Vector2( 5711.9, 723.727 )
 [node name="Edison" parent="." index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 198.953, 214.125 )
+time_ability1 = 5
+time_ability2 = 20
 
 [node name="Tesla" parent="." index="8" instance=ExtResource( 5 )]
 
 position = Vector2( 203.365, 560.95 )
 
-[connection signal="body_entered" from="Finish" to="Tesla" method="_on_Finish_body_entered"]
-
 [connection signal="body_entered" from="Finish" to="Edison" method="_on_Finish_body_entered"]
+
+[connection signal="body_entered" from="Finish" to="Tesla" method="_on_Finish_body_entered"]
 
 

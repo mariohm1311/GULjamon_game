@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/items/imports/game_over.png" type="Texture" id=1]
+[ext_resource path="res://scenes/game_over.gd" type="Script" id=2]
+
+[node name="game_over" type="Sprite"]
+
+position = Vector2( 962.543, 543.834 )
+scale = Vector2( 0.242107, 0.24579 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+

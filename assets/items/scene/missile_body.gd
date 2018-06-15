@@ -47,7 +47,7 @@ func _physics_process(delta):
 
 func set_target(tgt, tgt_position, tgt_velocity):
 	target = tgt
-	self.position = tgt_position + tgt_velocity*2.8 + Vector2(0,-600)
+	self.position = tgt_position + tgt_velocity*2.6 + Vector2(0,-600)
 
 
 func _ready():

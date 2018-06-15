@@ -7,8 +7,8 @@ export var time_ability1 = 5
 export var time_ability2 = 20
 
 var vel = Vector2()
-var time1 = 4.5
-var time2 = 19.5
+var time1 = 0
+var time2 = 0
 var flipped = false
 var moving = false
 
@@ -93,6 +93,7 @@ func _physics_process(delta):
 
 func create_impulse(vector):
 	moving=true
+	self.position += Vector2(0,-10)
 	vel += vector
 
 func _ready():
@@ -108,12 +109,12 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-		get_tree().change_scene("res://scenes/game_screen.tscn")
+	get_tree().change_scene("res://scenes/game_screen.tscn")
 
 
 
 func _on_Finish_body_entered(body):
-	get_tree().change_scene("res://scenes/Menu.tscn")
+	get_tree().change_scene("res://scenes/game_over.tscn")
 
 func coke_taken():
 	vel_scalar = 350

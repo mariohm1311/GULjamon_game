@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://game_screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/main_test.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/HUD.png" type="Texture" id=3]
+[ext_resource path="res://assets/items/imports/HUD2.png" type="Texture" id=3]
+[ext_resource path="res://assets/items/imports/Mini_misil.png" type="Texture" id=4]
+[ext_resource path="res://assets/items/imports/Bomb_1.png" type="Texture" id=5]
+[ext_resource path="res://assets/332381__davidoburke__8-bit-loop.wav" type="AudioStream" id=6]
 
 [node name="Node" type="Node"]
 
@@ -103,8 +106,41 @@ shadow_atlas_quad_3 = 4
 
 [node name="HUD" type="Sprite" parent="." index="2"]
 
-position = Vector2( 960.666, 525.624 )
-scale = Vector2( 0.240021, 0.240021 )
+position = Vector2( 955.236, 522.492 )
+scale = Vector2( 2.00258, 2.00258 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mini_misil" type="Sprite" parent="." index="3"]
+
+position = Vector2( 655.195, 90.3208 )
+scale = Vector2( 0.415297, 0.415297 )
+texture = ExtResource( 4 )
+
+[node name="Mini_misil2" type="Sprite" parent="." index="4"]
+
+position = Vector2( 1182.97, 993.889 )
+scale = Vector2( 0.415297, 0.415297 )
+texture = ExtResource( 4 )
+
+[node name="Bomb_1" type="Sprite" parent="." index="5"]
+
+position = Vector2( 504.406, 86.1751 )
+scale = Vector2( 0.447875, 0.452857 )
+texture = ExtResource( 5 )
+
+[node name="Bomb_2" type="Sprite" parent="." index="6"]
+
+position = Vector2( 1342.31, 984.83 )
+scale = Vector2( 0.447875, 0.452857 )
+texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 
