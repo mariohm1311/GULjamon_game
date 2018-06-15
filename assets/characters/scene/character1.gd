@@ -12,6 +12,7 @@ var time2 = 19.5
 var flipped = false
 var moving = false
 
+
 func _physics_process(delta):
 	time1 += delta
 	time2 += delta
@@ -103,3 +104,16 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+
+func _on_Area2D_body_entered(body):
+		get_tree().change_scene("res://scenes/game_screen.tscn")
+
+
+
+func _on_Finish_body_entered(body):
+	get_tree().change_scene("res://scenes/Menu.tscn")
+
+func coke_taken():
+	vel_scalar = 350
