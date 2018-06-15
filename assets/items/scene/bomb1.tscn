@@ -34,7 +34,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
 
-[node name="bomb1" type="Sprite" index="0"]
+[node name="bomb1" type="Sprite"]
 
 position = Vector2( 5.48799, -15.1454 )
 scale = Vector2( 0.4, 0.4 )

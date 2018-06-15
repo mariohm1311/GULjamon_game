@@ -3,15 +3,18 @@ extends KinematicBody2D
 export var vel_scalar = 300
 export var jump = 1000
 export var g_force = 20
-export var time_ability = 5
+export var time_ability1 = 5
+export var time_ability2 = 20
 
 var vel = Vector2()
-var time = 4.5
+var time1 = 4.5
+var time2 = 19.5
 var flipped = false
 var moving = false
 
 func _physics_process(delta):
-	time += delta
+	time1 += delta
+	time2 += delta
 	
 	vel.y += g_force
 		
@@ -66,12 +69,22 @@ func _physics_process(delta):
 		
 	moving = false
 	
-	if (Input.is_action_just_pressed("ability1") and time > time_ability):
-		time = 0
+	if (Input.is_action_just_pressed("ability11") and time1 > time_ability1):
+		time1 = 0
 		var bomb = preload("res://assets/items/scene/bomb1.tscn").instance()
 		bomb.set_target('Edison')
 		bomb.position = position
 		get_parent().add_child(bomb)
+	
+	if (Input.is_action_just_pressed("ability21") and time2 > time_ability2):
+		time2 = 0
+		
+		var tgt_position = self.get_parent().get_node('Edison').position
+		var tgt_velocity = self.get_parent().get_node('Edison').vel
+		
+		var missile = preload("res://assets/items/scene/missile_body.tscn").instance()
+		missile.set_target('Edison', tgt_position, tgt_velocity)
+		get_parent().add_child(missile)
 
 	vel = move_and_slide(vel, Vector2(0,-1))
 

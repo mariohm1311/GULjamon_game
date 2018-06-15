@@ -79,6 +79,7 @@ func _physics_process(delta):
 
 func create_impulse(vector):
 	moving=true
+	self.position += Vector2(0,-10)
 	vel += vector
 
 func _ready():
