@@ -97,3 +97,7 @@ func _ready():
 func _on_Area2D_body_entered(body):
 		get_tree().change_scene("res://scenes/game_screen.tscn")
 
+
+
+func _on_Finish_body_entered(body):
+	get_tree().change_scene("res://scenes/Menu.tscn")
