@@ -16,7 +16,5 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	if body.name == "Tesla":
-		self.get_parent().get_node(Tesla).coke_taken()
-	else:
-		self.get_parent().get_node(Edison).coke_taken()
+	body.vel_scalar = 350
+	queue_free()

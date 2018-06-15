@@ -14,7 +14,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 52.3851, 40.7395 )
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="evil-laboratory-background-4" type="Sprite" parent="." index="0"]
 
